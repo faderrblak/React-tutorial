@@ -2,9 +2,9 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 
-function Hi() {
+function Hi(props) {
   return <div className="practice"> 
-    Hello <strong>Faderr</strong>
+    <h1>Hello <strong>{props.name}</strong></h1>
     <h3>Favorite Foods:</h3>
     <ul>
       <li>Pizza</li>
@@ -14,4 +14,13 @@ function Hi() {
   </div>;
 }
 
-ReactDOM.render(<Hi />, document.querySelector("#root"));
+const MediaCard = ({title, body, imageUrl}) => {
+  return <div>
+    <h2>{title}</h2>
+    <p>{body}</p>
+    <img src={imageUrl} alt=""/>
+  </div>;
+}
+
+ReactDOM.render(<Hi name="Faderr"/>, document.querySelector("#root"));
+ReactDOM.render(<MediaCard title="Foods" body="Foods I like are" imageUrl=""/>, document.querySelector("#root"));
