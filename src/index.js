@@ -22,5 +22,12 @@ const MediaCard = ({title, body, imageUrl}) => {
   </div>;
 }
 
+const Gate = ({isOpen}) => {
+  return <div>
+    {isOpen === true ? "open" : "closed"}
+  </div>
+}
+
 ReactDOM.render(<Hi name="Faderr"/>, document.querySelector("#root"));
-ReactDOM.render(<MediaCard title="Foods" body="Foods I like are" imageUrl=""/>, document.querySelector("#root"));
+ReactDOM.render(<MediaCard title="Foods" body="Foods I like are:" imageUrl="https://d1ralsognjng37.cloudfront.net/ac696fa3-87ad-4974-a132-9be796b19a39.jpeg"/>, document.querySelector("#root"));
+ReactDOM.render(<Gate isOpen={false}/>, document.querySelector("#root"));
