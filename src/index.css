@@ -1,4 +1,13 @@
-.practice {
-  font-family: sans-serif;
-  color: navy;
+html, body, #root, .room {
+  height: 100%;
+}
+
+.lit {
+  background-color: white;
+  color: black;
+}
+
+.dark {
+  background-color: black;
+  color: white;
 }
