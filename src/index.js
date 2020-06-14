@@ -10,8 +10,11 @@ const Room = () => {
     <div className={`room ${brightness}`}>
       The room is {isLit ? 'lit' : 'dark'}
       <br/>
-      <button onClick = {() => setLit(!isLit)}>
-        flip
+      <button onClick = {() => setLit(true)}>
+        On
+      </button>
+      <button onClick = {() => setLit(false)}>
+        Off
       </button>
     </div>
   );
