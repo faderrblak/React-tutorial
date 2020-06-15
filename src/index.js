@@ -19,7 +19,7 @@ const Reddit = () => {
       <h1>/r/reactjs</h1>
       <ul>
         {posts.map(post => (
-          <li key={post.id}>{post.title}</li>
+          <li key={post.id}><a href={post.url}>{post.title}</a>, {post.author_fullname} (score: {post.score})</li>
         ))}
       </ul>
     </div>
